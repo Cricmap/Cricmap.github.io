@@ -174,14 +174,26 @@
     
     <script type="text/javascript">
         
+        window.onload = function(){
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            if (h/w > 1.2){
+                document.getElementById("content").style.width = .85*w;
+            }else{
+                document.getElementById("content").style.width = .45*w;
+            }
+            
+        }
+        
         window.onresize = function(){
             var w = window.innerWidth;
             var h = window.innerHeight;
             if (h/w > 1.2){
-                document.getElementById("content").width = "85%";
+                document.getElementById("content").style.width = .85*w;
             }else{
-                document.getElementById("content").width = "45%";
+                document.getElementById("content").style.width = .45*w;
             }
+            
         }
 
         var bk = document.getElementById('vid');
