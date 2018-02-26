@@ -99,7 +99,7 @@
         
         #content{
             position: relative;
-            width: 40%;
+            width: 45%;
             min-width: 400px;
             margin: 5% auto;
             
@@ -173,6 +173,16 @@
     </style>
     
     <script type="text/javascript">
+        
+        window.onresize = function(){
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            if (h/w > 1.2){
+                document.getElementById("content").width = "85%";
+            }else{
+                document.getElementById("content").width = "45%";
+            }
+        }
 
         var bk = document.getElementById('vid');
         bk.onclick = function () {
